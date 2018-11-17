@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ajax Crash Course</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+	
+
+	<div class="container">
+		<h1 class="display-4 text-center py-5">Ajax Crash Course</h1>
+		<hr>
+		<div class="row py-4">
+			<div class="col">
+				<input type="text" placeholder="Enter Name" id="nameField" class="form-control">
+			</div>
+
+			<div class="col">
+				<input type="text" placeholder="Enter Phone" id="phoneField" class="form-control">
+			</div>
+			<div class="col">
+				<input type="email" placeholder="Enter Email" id="emailField" class="form-control">
+			</div>
+			<div class="col text-center">
+				<button id="saveContact" class="btn btn-info">Save Contract</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<table class="table w-100">
+					<thead class="thead-dark">
+						<tr>
+							<th>Name</th>
+							<th>Phone</th>
+							<th>Email</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody id="tbody">
+						<tr>
+							<td>Mark</td>
+							<td>Otto</td>
+							<td>@me</td>
+							<td>
+								<button class="btn btn-warning btn-sm">Edit</button>
+								<button class="btn btn-danger btn-sm">Delete</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+
+
+<!-- Modal  -->
+
+	<div class="modal fade" id="updateContactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Update Contact</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <form>
+	          <div class="form-group">
+	            <label for="edit-name" class="col-form-label">Edit Name:</label>
+	            <input type="text" class="form-control" id="edit-name">
+	          </div>
+	          <div class="form-group">
+	            <label for="edit-phone" class="col-form-label">Edit Phone:</label>
+	            <input type="text" class="form-control" id="edit-phone">
+	          </div>
+	          <div class="form-group">
+	            <label for="edit-email" class="col-form-label">Email Name:</label>
+	            <input type="text" class="form-control" id="edit-email">
+	          </div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary" id="updateContact">Update Contact</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.js"
+  integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+  crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
